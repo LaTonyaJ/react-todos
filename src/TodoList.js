@@ -9,12 +9,22 @@ function TodoList(){
         setTodo(todo => [...todo, newTodo]);
     }
 
+    const remove = (id) => {
+        console.log('removing')
+        setTodo(todo => todo.filter(t => t.id !== id));
+    }
+
     return(
         <div>
             <NewTodoForm addTodo={addTodo}/>
             <ul>
                 {todo.map(todo => 
-                    (<Todo key={todo.id} task={todo.formData}/>))}
+                    (<Todo
+                     id={todo.id}    
+                     key={todo.id} 
+                     task={todo.formData} 
+                     remove={remove}
+                    />))}
             </ul>
         </div>
     );

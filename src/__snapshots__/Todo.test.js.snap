@@ -6,9 +6,7 @@ exports[`matches snapshot 1`] = `
     class="todos"
   >
     <li />
-    <button
-      class="rm-btn"
-    >
+    <button>
       X
     </button>
   </div>

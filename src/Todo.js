@@ -1,10 +1,13 @@
 import React from 'react';
 
-function Todo({task}){
+function Todo({id, task, remove}){
+    
+    const handleRemove = () => remove(id);
+
     return(
         <div className='todos'>
         <li>{task}</li>
-        <button className='rm-btn'>X</button>
+        <button onClick={handleRemove}>X</button>
         </div>
     );
 }
